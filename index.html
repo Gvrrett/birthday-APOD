@@ -66,57 +66,7 @@
     })
     
 
-    /* req.open("GET", apod_url + api_key);
-        req.send();
-    
-    
-    req.addEventListener("load", function(){
-	    if(req.status == 200 && req.readyState == 4){
-  	    var response = JSON.parse(req.responseText);
-        document.getElementById("title").textContent = response.title;
-        document.getElementById("date").textContent = response.date;
-        document.getElementById("pic").src = response.hdurl;
-        document.getElementById("explanation").textContent = response.explanation;
-        }
-    })
-    
-    
-    */
-    
-   
-    /*
-    let apod1 = "https://api.nasa.gov/planetary/apod?date=";
-    req.open("GET", apod1 + "1996-05-25");
-        req.send();
-    
-    req.addEventListener("load", function(){
-        if(req.status == 200 && req.readyState == 4){
-  	    var response = JSON.parse(req.responseText);
-        document.getElementById("title").textContent = response.title;
-        document.getElementById("date").textContent = response.date;
-        document.getElementById("pic").src = response.hdurl;
-        document.getElementById("explanation").textContent = response.explanation;
-        } 
-        
-    })
-    */
-    
-    // Bungie
-    
-    let apiKey = "BL26wabOU0rBly4ZSJWlqwLzKAyJTz0UqlESs1jO";
-    let xhr = new XMLHttpRequest();
-    
-    xhr.open("GET", "https://www.bungie.net/platform/Destiny/Manifest/InventoryItem/1274330687/", true);
-    xhr.setRequestHeader("X-API-Key", apiKey);
-
-    xhr.onreadystatechange = function(){
-    if(this.readyState === 4 && this.status === 200){
-    let json = JSON.parse(this.responseText);
-    console.log(json.Response.data.inventoryItem.itemName); 
-    }
-    }
-
-xhr.send();
+ 
     
 </script>    
     
@@ -173,20 +123,7 @@ xhr.send();
     </div>  
     
     
-    
-   <div id="apod"> 
-        
-   <div class="col-sm-6" style= "color:white" id="apod_info">     
-     <h3>Are you good at Destiny?</h3>
-      <h4 id="title"></h4>
-      
-       <p style="text-align:left;" id="explanation"></p> 
-    </div>
-       <div class="col-sm-6" style= "color:white" id="apod_img">
-     
-      </div> 
-       
-    </div>  
+  
    
     
     </body>
