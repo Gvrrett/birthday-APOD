@@ -41,6 +41,17 @@
     
 <script>
   
+  /*
+  This is the initial request to get the Astronomy picture of the day from NASA. 
+  The default parameter date parameter is set to April 1, 1999. By concatenating 
+  the API path link with the API key and selected date, I am able to get the APOD 
+  for any date.
+  
+ I have seen examples that pull the picture for the current date, but I wanted to be able 
+ to get the picture for any date of my choosing. 
+  
+  
+  */
     
     // NASA 
      var req = new XMLHttpRequest();
@@ -70,6 +81,12 @@
     
 </script>    
     
+  /*
+  
+  the onchange event handler makes it so whenever the date on the calendar 
+  is changed, it calls "myFunction" to send a new request. The new request uses 
+  the new date as the birthday variable which changes the APOD accordingly.
+  */
 
     
   <p>  
@@ -110,13 +127,13 @@
      
        
        
-   <div class="col-sm-6" style= "color:white" id="apod_info">     
+   <div class="col-sm-6" id="apod_info">     
      <h3>NASA Astronomy Picture of the day</h3>
       <h4 id="title"></h4>
       <h5>Date: <span id="date"></span></h5>
        <p style="text-align:left;" id="explanation"></p> 
     </div>
-       <div class="col-sm-6" style= "color:white" id="apod_img">
+       <div class="col-sm-6" id="apod_img">
       <img id="pic" src="" alt="NASA Picture of the day" width="100%" class="center">
       </div> 
        
